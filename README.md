@@ -2,8 +2,8 @@
 
 - Ementa
 
-Definição de persistência. Persistência empregando arquivos binários, documentos XML, objetos serializáveis, SGBDs. 
-Tecnologias para persistência de informações. Persistência de objetos usando base relacional.
+  - Definição de persistência. Persistência empregando arquivos binários, documentos XML, objetos serializáveis, SGBDs. 
+  - Tecnologias para persistência de informações. Persistência de objetos usando base relacional.
 
 - Conteúdo Programático
 
@@ -14,8 +14,8 @@ Tecnologias para persistência de informações. Persistência de objetos usando
   - JDBC
   - JPA2
   - SBGDs NoSQL
-    > Orientados à documentos - MongoDB
-    > Chave-valor - Redis
-    > Orientados à coluna - Cassandra 
-    > Grafo - Neo4J. Graphast
+    # Orientados à documentos - MongoDB
+    # Chave-valor - Redis
+    # Orientados à coluna - Cassandra 
+    # Grafo - Neo4J. Graphast
   - Database e backend como serviço - Firebase
