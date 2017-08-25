@@ -7,15 +7,15 @@ Tecnologias para persistência de informações. Persistência de objetos usando
 
 - Conteúdo Programático
 
-  ° Persistência de Arquivos: texto, binário, CSV, propriedades.
-  ° XML, YAML
-  ° JSON
-  ° Serialização de objetos.
-  ° JDBC
-  ° JPA2
-  ° SBGDs NoSQL
+  - Persistência de Arquivos: texto, binário, CSV, propriedades.
+  - XML, YAML
+  - JSON
+  - Serialização de objetos.
+  - JDBC
+  - JPA2
+  - SBGDs NoSQL
     > Orientados à documentos - MongoDB
     > Chave-valor - Redis
     > Orientados à coluna - Cassandra 
     > Grafo - Neo4J. Graphast
-  ° Database e backend como serviço - Firebase
+  - Database e backend como serviço - Firebase
