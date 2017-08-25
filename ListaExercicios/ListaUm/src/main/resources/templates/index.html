@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="listaContatos">
+<head>
+    <meta charset="UTF-8"/>
+    <title>Title</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css"
+          integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M" crossorigin="anonymous" />
+</head>
+<body class="container" ng-controller="listaContatosController">
+
+    <div >
+        <h3 class="text-center">{{aplicacao}}</h3>
+    </div>
+
+    <hr/>
+
+    <div class="row">
+
+        <div class="col-6 col-4" >
+            <table class="table">
+                <thead>
+                <tr>
+                    <th>NOME</th>
+                    <th>ENDEREÇO</th>
+                    <th>TELEFONE</th>
+                    <th>E-MAIL</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr ng-repeat="contato in contatos">
+                    <td>{{contato.nome}}</td>
+                    <td>{{contato.endereco}}</td>
+                    <td>{{contato.telefone}}</td>
+                    <td>{{contato.email}}</td>
+                </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <div class="col-6 col-4">
+            <form class="form-group ">
+                <div class="form-group">
+                    <label for="nome">Nome</label>
+                    <input type="text" class="form-control" id="nome" ng-model="contato.nome"/>
+                </div>
+                <div class="form-group">
+                    <label for="endereco">Endereço</label>
+                    <input type="text" class="form-control" id="endereco" ng-model="contato.endereco" />
+                </div>
+                <div class="form-group">
+                    <label for="telefone">Telefone</label>
+                    <input type="text" class="form-control" id="telefone" ng-model="contato.telefone"/>
+                </div>
+                <div class="form-group">
+                    <label for="email">Email</label>
+                    <input type="text" class="form-control" id="email" ng-model="contato.email"/>
+                </div>
+                <button class="btn btn-default" ng-click="addContact(contato)">adicionar</button>
+            </form>
+        </div>
+
+    </div>
+
+    <!--Importação Angular-->
+    <script src="js/angular/angular.js"></script>
+    <!--Importação do Controller-->
+    <script src="js/controllers/listaController.js"></script>
+    <!--Importação dos service-->
+    <script src="js/services/contatoAPI.js"></script>
+    <!--Importação dos values-->
+    <script src="js/value/configValue.js"></script>
+
+</body>
+</html>
