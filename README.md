@@ -14,8 +14,8 @@
   - JDBC
   - JPA2
   - SBGDs NoSQL
-    # Orientados à documentos - MongoDB
-    # Chave-valor - Redis
-    # Orientados à coluna - Cassandra 
-    # Grafo - Neo4J. Graphast
+    - Orientados à documentos - MongoDB
+    - Chave-valor - Redis
+    - Orientados à coluna - Cassandra 
+    - Grafo - Neo4J. Graphast
   - Database e backend como serviço - Firebase
