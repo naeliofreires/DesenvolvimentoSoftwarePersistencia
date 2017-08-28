@@ -5,7 +5,7 @@ angular.module("listaContatos").controller("listaContatosController", function (
     $scope.aplicacao = "Persistencia em Arquivos - CSV";
     $scope.contatos = [];
 
-    // Carregando todos os contatos.
+    // Carregando Contatos
     $scope.getContatos = function () {
 
         contatoAPI.loadAllContacts().then(function (response) {
@@ -16,6 +16,7 @@ angular.module("listaContatos").controller("listaContatosController", function (
 
     $scope.getContatos();
 
+    // Adicionar Contatos
     $scope.addContact = function (contato) {
 
         contatoAPI.adicionarContato(contato).then(function (response) {

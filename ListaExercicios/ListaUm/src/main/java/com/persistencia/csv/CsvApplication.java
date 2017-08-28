@@ -16,7 +16,7 @@ public class CsvApplication {
 		Properties prop = new Properties();
 
 		try {
-			prop.setProperty("caminhoArquivo", "/home/naelio/contatos.csv");
+            prop.setProperty("caminhoArquivo", "user.home.contatos.csv");
 			prop.store(new FileOutputStream("config.properties"), null);
 		}catch (Exception ex){
 			ex.printStackTrace();
