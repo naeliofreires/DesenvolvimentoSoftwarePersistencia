@@ -25,7 +25,7 @@ public class ContatoController {
 
         try {
             // carregando o arquivo config.properties
-            prop.load(new FileInputStream("config.properties"));
+            prop.load(new FileInputStream(System.getProperty("user.home") + "/config.properties"));
             InputStream is = new FileInputStream(prop.getProperty("caminhoArquivo"));
             entrada = new Scanner(is);
 
