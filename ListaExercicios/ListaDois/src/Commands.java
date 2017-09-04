@@ -72,7 +72,7 @@ public class Commands {
         entrada = new Scanner(is);
 
         int numberOfLines = 0;
-        int numberOfChars = 0;
+        Integer numberOfChars = 0;
         int numberOfWords = 0;
 
         while (entrada.hasNextLine()) {
