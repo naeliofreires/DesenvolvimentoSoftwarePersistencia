@@ -1,11 +1,18 @@
 import org.jsoup.Jsoup;
 import org.jsoup.nodes.Document;
-import org.jsoup.nodes.Element;
 import org.jsoup.select.Elements;
 
+import java.io.FileInputStream;
+import java.io.PrintStream;
 import java.util.ArrayList;
 
 public class ConsumingData {
+
+    CheckingFile checkingFile;
+
+    ConsumingData(){
+        this.checkingFile = new CheckingFile();
+    }
 
     public void MercadoLivre(String choice){
        try{
@@ -17,9 +24,19 @@ public class ConsumingData {
            Elements elements_price = doc.select(".item__price");
            ArrayList<String> price = (ArrayList<String>) elements_price.eachText();
 
-//           for (int i = 0; i < titles.size(); i++ ) {
-//               System.out.println(titles.get(i) + " - " + price.get(i));
-//           }
+           // verifying that the file exists, if not, it is created
+           if(!checkingFile.fileExists())
+               checkingFile.createFile();
+
+           checkingFile.getProperties().load(new FileInputStream(System.getProperty("user.home") + "/config.properties"));
+
+           PrintStream printStream = new PrintStream(checkingFile.getProperties().getProperty("file-path"));
+
+           for(int i =0; i  < titles.size(); i++)
+               printStream.println(titles.get(i) + "," + price.get(i));
+           printStream.close();
+
+
        }catch (Exception ex){
            ex.printStackTrace();
        }

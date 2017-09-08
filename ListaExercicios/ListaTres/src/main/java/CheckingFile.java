@@ -13,9 +13,13 @@ public class CheckingFile {
         this.properties = new Properties();
     }
 
-    private boolean fileExists() throws IOException{
+    public Properties getProperties() {
+        return properties;
+    }
+
+    public boolean fileExists() throws IOException{
         try {
-            properties.load(new FileInputStream(System.getProperty("user.home") + "/list3/config.properties"));
+            properties.load(new FileInputStream(System.getProperty("user.home") + "/config.properties"));
             System.out.println("file found");
             return true;
         }catch (FileNotFoundException ex){
@@ -30,7 +34,7 @@ public class CheckingFile {
     public boolean createFile() throws IOException{
         try{
             if(!fileExists()){
-                properties.setProperty("file-path", System.getProperty("user.home") + "/lista3/data-store.csv");
+                properties.setProperty("file-path", System.getProperty("user.home") + "/data-store.csv");
                 properties.store(new FileOutputStream(System.getProperty("user.home") + "/config.properties"), null);
                 System.out.println("file config.properties and data-store have been created\n");
                 return true;
