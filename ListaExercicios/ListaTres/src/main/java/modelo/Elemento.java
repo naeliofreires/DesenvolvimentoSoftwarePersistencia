@@ -1,9 +1,11 @@
+package modelo;
+
 public class Elemento {
 
     String id;
     String nome;
 
-    Elemento(){}
+    public Elemento(){}
 
     public String getId() {
         return id;

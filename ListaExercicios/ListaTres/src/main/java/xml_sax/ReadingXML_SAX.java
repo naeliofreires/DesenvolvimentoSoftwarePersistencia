@@ -1,11 +1,14 @@
+package xml_sax;
+
 import java.io.*;
 import java.util.ArrayList;
-import java.util.Iterator;
 
 import javax.xml.parsers.ParserConfigurationException;
 import javax.xml.parsers.SAXParser;
 import javax.xml.parsers.SAXParserFactory;
 
+import jsoup.CheckingFile;
+import modelo.Elemento;
 import org.xml.sax.Attributes;
 import org.xml.sax.SAXException;
 import org.xml.sax.helpers.DefaultHandler;
@@ -16,7 +19,7 @@ public class ReadingXML_SAX extends DefaultHandler {
     private Elemento tempElemento;
     private ArrayList<Elemento> myEmpls = new ArrayList<>();
 
-    ReadingXML_SAX(){
+    public ReadingXML_SAX(){
         this.checkingFile = new CheckingFile();
     }
 
@@ -69,7 +72,7 @@ public class ReadingXML_SAX extends DefaultHandler {
         tempVal = null;
     }
 
-    public void saveData(String id, String name){
+    public void saveData(){
         try {
             // verifying that the file exists, if not, it is created
             if(!this.checkingFile.fileExists())

@@ -1,3 +1,5 @@
+package jsoup;
+
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
@@ -7,9 +9,9 @@ import java.util.Properties;
 // class to check if the file exists, otherwise I will create the file
 public class CheckingFile {
 
-    Properties properties;
+    private Properties properties;
 
-    CheckingFile(){
+    public CheckingFile(){
         this.properties = new Properties();
     }
 

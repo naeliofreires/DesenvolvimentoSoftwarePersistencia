@@ -1,6 +1,9 @@
+package jsoup;
+
 import org.jsoup.Jsoup;
 import org.jsoup.nodes.Document;
 import org.jsoup.select.Elements;
+
 
 import java.io.FileInputStream;
 import java.io.PrintStream;
@@ -8,9 +11,9 @@ import java.util.ArrayList;
 
 public class ConsumingData {
 
-    CheckingFile checkingFile;
+    public CheckingFile checkingFile;
 
-    ConsumingData(){
+    public ConsumingData(){
         this.checkingFile = new CheckingFile();
     }
 
