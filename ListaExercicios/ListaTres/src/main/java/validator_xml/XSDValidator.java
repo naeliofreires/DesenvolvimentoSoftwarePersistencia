@@ -14,20 +14,27 @@ import org.xml.sax.SAXException;
 
 public class XSDValidator {
 
-    public static boolean validateXMLSchema(String xmlPath){
+    getPathXSD gpx;
+
+    public XSDValidator(){
+        gpx = new getPathXSD();
+    }
+
+    public boolean validateXMLSchema(String xmlPath){
         try {
 
             SchemaFactory factory = SchemaFactory.newInstance(XMLConstants.W3C_XML_SCHEMA_NS_URI);
-            Schema schema = factory.newSchema(new File(System.getProperty("user.home") + "/students.xsd"));
+
+            Schema schema = factory.newSchema(new File(this.gpx.getPath(xmlPath)));
 
             Validator validator = schema.newValidator();
             validator.validate(new StreamSource(new File(xmlPath)));
 
         } catch (IOException e){
-            System.out.println("Exception: "+e.getMessage());
+            System.out.println("Exception: "+ e.getMessage());
             return false;
         }catch(SAXException e1){
-            System.out.println("SAX Exception: "+e1.getMessage());
+            System.out.println("SAX Exception: "+ e1.getMessage());
             return false;
         }
 
