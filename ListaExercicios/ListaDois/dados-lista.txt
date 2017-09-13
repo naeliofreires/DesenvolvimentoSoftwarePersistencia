@@ -1,0 +1,68 @@
+
+Arquivo de 3.1G
+
+link do arquivo para download:
+https://public.enigma.com/datasets/bls-quarterly-census-of-employment-and-wages/b674e8f8-cd13-4e78-8674-92575b58f3c9
+________________________________________________________________________________________________________________
+	[Comando]	[Tempo]	
+Java	  Cat		  140089 mls
+Linux	  Cat		  3m29.668s
+
+Java	  Head		  45 mls
+Linux	  Head		  0m0.050s
+
+Java	  Wc		  92990 mls
+Linux	  Wc		  0m38.923s	
+________________________________________________________________________________________________________________
+
+Encriptar:
+	gpg -c plasma.csv			time: 1m18.745s
+
+Decriptar:
+	gpg plasma.csv.gpg	 		time: 2m8.425s
+________________________________________________________________________________________________________________
+
+Checksum:
+	cksum plasma.csv.gpg			time: 0m1.270s
+						saída: 721115353 337807600 plasma.csv.gpg
+MD5:
+	md5sum plasma.csv.gpg > md5.txt 	time: 0m0.797s
+						saída: e2b41e821163af83f9c71805676e74b3  plasma.csv.gpg
+
+	md5sum -c md5.txt			time: 0m0.807s
+						saída: plasma.csv.gpg: SUCESSO
+SHA1
+	sha1sum plasma.csv.gpg > sha1.txt	time: 0m0.919s
+						saída: 8dcb788abdb0689b91867df87e7769fad81d0b95  plasma.csv.gpg
+
+	sha1sum -c plasma.csv.gpg		time: 0m0.257s
+						saída: sha1sum: plasma.csv.gpg: foram encontradas linhas de soma
+						de verificação SHA1 com formatação imprópria
+________________________________________________________________________________________________________________
+
+Zip:
+	zip plasma.zip plasma.csv		time: 1m13.734s
+						size: [316,3MiB]  (deflated 90%)
+Gzip:
+	gzip plasma.csv				time: 1m8.802s
+						size: [316,3MiB]
+Bzip2:
+	bzip2 plasma.csv			time: 10m27.486s
+						size: [260,7MiB]
+
+Rar:
+	rar a plasma.rar plasma.csv		time: 2m21.908s
+						size: [257,3MiB]
+7z:
+	7z  a plasma.7z plasma.csv		time: 10m52.513s
+						size: [227,9MiB]
+
+
+
+
+
+
+
+
+
+
