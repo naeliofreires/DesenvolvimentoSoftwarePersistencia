@@ -1,11 +1,13 @@
 package service;
 
+import model.Dependents;
 import model.Employees;
-import org.hibernate.SQLQuery;
+import util.JPAUtil;
 
 import javax.persistence.EntityManager;
 import javax.persistence.EntityManagerFactory;
 import javax.persistence.Persistence;
+import javax.persistence.Query;
 import javax.persistence.criteria.CriteriaBuilder;
 import javax.persistence.criteria.CriteriaQuery;
 
@@ -39,11 +41,12 @@ public class EmployeeServiceBean {
     }
 
 //    SQL Native
-    public void SQLNativeGetAll(){
-//        String sql = "SELECT p FROM Employees p";
-//        SQLQuery query = (SQLQuery) em.createNativeQuery(sql)
-//        query.addEntity(Employees.class);
-//        return query.list();
+    public List<Dependents> SQLNativeGetAll(){
+        JPAUtil.init("devPostgreSQL");
+        final String SQL = "SELECT p FROM Employees p";
+        Query query = JPAUtil.getEntityManager().createNativeQuery(SQL, Employees.class);
+        List<Dependents> l = query.getResultList();
+        return l;
     }
 
     public List findEmployesById(final Integer id){

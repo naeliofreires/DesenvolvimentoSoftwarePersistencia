@@ -12,7 +12,35 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300" />
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file leaf-file-name="EmployeeServiceBean.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/java/service/EmployeeServiceBean.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="345">
+              <caret line="48" column="17" lean-forward="true" selection-start-line="48" selection-start-column="17" selection-end-line="48" selection-end-column="17" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <marker date="1507662860250" expanded="true" signature="1279:1304" ph="SELECT p FRO... Employees" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="DependentsServiceBean.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/service/DependentsServiceBean.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="296">
+              <caret line="54" column="51" lean-forward="true" selection-start-line="54" selection-start-column="7" selection-end-line="54" selection-end-column="51" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="e#1256#1264#0" expanded="true" />
+                <marker date="1507661614874" expanded="true" signature="1785:1830" ph="select * fro... dependents" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -69,13 +97,13 @@
         <option value="$PROJECT_DIR$/src/main/resources/META-INF/persistence.xml" />
         <option value="$PROJECT_DIR$/src/main/java/dao/EmployeesJDBC.java" />
         <option value="$PROJECT_DIR$/src/main/java/Operações.md" />
-        <option value="$PROJECT_DIR$/src/main/java/service/EmployeeServiceBean.java" />
         <option value="$PROJECT_DIR$/src/main/java/model/Dependents.java" />
         <option value="$PROJECT_DIR$/pom.xml" />
-        <option value="$PROJECT_DIR$/src/main/java/service/DependentsServiceBean.java" />
         <option value="$PROJECT_DIR$/Operações.md" />
         <option value="$PROJECT_DIR$/src/main/java/main.java" />
         <option value="$PROJECT_DIR$/src/main/java/util/ConnectionFactory.java" />
+        <option value="$PROJECT_DIR$/src/main/java/service/DependentsServiceBean.java" />
+        <option value="$PROJECT_DIR$/src/main/java/service/EmployeeServiceBean.java" />
       </list>
     </option>
   </component>
@@ -153,6 +181,32 @@
             <path>
               <item name="persistindo-JPA-H2-DAO-JDBC-JPQL-Criteria-NamedQuery-SQLNative" type="b2602c69:ProjectViewProjectNode" />
               <item name="persistindo-JPA-H2-DAO-JDBC-JPQL-Criteria-NamedQuery-SQLNative" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="persistindo-JPA-H2-DAO-JDBC-JPQL-Criteria-NamedQuery-SQLNative" type="b2602c69:ProjectViewProjectNode" />
+              <item name="persistindo-JPA-H2-DAO-JDBC-JPQL-Criteria-NamedQuery-SQLNative" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="persistindo-JPA-H2-DAO-JDBC-JPQL-Criteria-NamedQuery-SQLNative" type="b2602c69:ProjectViewProjectNode" />
+              <item name="persistindo-JPA-H2-DAO-JDBC-JPQL-Criteria-NamedQuery-SQLNative" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="persistindo-JPA-H2-DAO-JDBC-JPQL-Criteria-NamedQuery-SQLNative" type="b2602c69:ProjectViewProjectNode" />
+              <item name="persistindo-JPA-H2-DAO-JDBC-JPQL-Criteria-NamedQuery-SQLNative" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="persistindo-JPA-H2-DAO-JDBC-JPQL-Criteria-NamedQuery-SQLNative" type="b2602c69:ProjectViewProjectNode" />
+              <item name="persistindo-JPA-H2-DAO-JDBC-JPQL-Criteria-NamedQuery-SQLNative" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="service" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -322,15 +376,16 @@
       <workItem from="1507563121113" duration="3047000" />
       <workItem from="1507569205399" duration="52000" />
       <workItem from="1507604486143" duration="12000" />
-      <workItem from="1507660791426" duration="1570000" />
+      <workItem from="1507660791426" duration="2053000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="51210000" />
+    <option name="totallyTimeSpent" value="51693000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="53" y="32" width="1325" height="735" extended-state="6" />
+    <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -347,7 +402,7 @@
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Persistence" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.23849057" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.23849057" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -659,19 +714,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/service/EmployeeServiceBean.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="189">
-          <caret line="30" column="41" lean-forward="true" selection-start-line="30" selection-start-column="41" selection-end-line="30" selection-end-column="41" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#1019#1020#0" expanded="true" />
-            <element signature="e#1098#1099#0" expanded="true" />
-            <marker date="1507511037747" expanded="true" signature="1177:1202" ph="SELECT p FRO... Employees" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/model/Dependents.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="26">
@@ -687,18 +729,6 @@
         <state relative-caret-position="348">
           <caret line="46" column="36" lean-forward="true" selection-start-line="46" selection-start-column="36" selection-end-line="46" selection-end-column="36" />
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/service/DependentsServiceBean.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="302">
-          <caret line="36" column="62" lean-forward="false" selection-start-line="36" selection-start-column="62" selection-end-line="36" selection-end-column="62" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#1256#1264#0" expanded="true" />
-            <marker date="1507661614874" expanded="true" signature="1785:1830" ph="select * fro... dependents" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -750,6 +780,29 @@
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/service/DependentsServiceBean.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="296">
+          <caret line="54" column="51" lean-forward="true" selection-start-line="54" selection-start-column="7" selection-end-line="54" selection-end-column="51" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#1256#1264#0" expanded="true" />
+            <marker date="1507661614874" expanded="true" signature="1785:1830" ph="select * fro... dependents" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/service/EmployeeServiceBean.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="345">
+          <caret line="48" column="17" lean-forward="true" selection-start-line="48" selection-start-column="17" selection-end-line="48" selection-end-column="17" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <marker date="1507662860250" expanded="true" signature="1279:1304" ph="SELECT p FRO... Employees" />
+          </folding>
         </state>
       </provider>
     </entry>
