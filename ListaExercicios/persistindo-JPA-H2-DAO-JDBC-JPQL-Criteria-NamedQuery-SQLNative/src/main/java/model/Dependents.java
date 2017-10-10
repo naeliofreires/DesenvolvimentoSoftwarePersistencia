@@ -2,10 +2,16 @@ package model;
 
 
 import javax.persistence.*;
+import java.io.Serializable;
 
 @Entity
 @Table
-public class Dependents {
+@NamedQueries({
+        @NamedQuery(
+                name = "Dependents.LikeName",
+                query = "select d from Dependents d where d.name like 'd%'")
+})
+public class Dependents implements Serializable{
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -21,12 +27,25 @@ public class Dependents {
 
     public Dependents() { }
 
-    public Dependents(Integer id) { this.id = id; }
+    public Dependents(Integer id) {
+        this.id = id;
+    }
+
+    public Dependents(String cpf, String name) {
+        this.cpf = cpf;
+        this.name = name;
+    }
 
     public Dependents(Integer id, String cpf, String name) {
         this.id = id;
         this.cpf = cpf;
         this.name = name;
+    }
+
+    public Dependents(String cpf, String name, Employees empl) {
+        this.cpf = cpf;
+        this.name = name;
+        this.empl = empl;
     }
 
     public Integer getId() {
@@ -51,5 +70,13 @@ public class Dependents {
 
     public void setName(String name) {
         this.name = name;
+    }
+
+    public Employees getEmpl() {
+        return empl;
+    }
+
+    public void setEmpl(Employees empl) {
+        this.empl = empl;
     }
 }

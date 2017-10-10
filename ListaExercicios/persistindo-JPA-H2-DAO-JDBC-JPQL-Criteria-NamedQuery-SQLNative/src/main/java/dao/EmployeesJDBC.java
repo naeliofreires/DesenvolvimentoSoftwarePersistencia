@@ -44,15 +44,13 @@ public class EmployeesJDBC implements iEmployees {
 
             stmt.executeUpdate();
 
+            ConnectionFactory.statementClose(stmt);
+
         }catch (SQLException e) {
             e.printStackTrace();
         }finally {
-            try {
-                if (con != null)
-                    con.close();
-            } catch (SQLException e) {
-                e.printStackTrace();
-            }
+            if (con != null)
+                ConnectionFactory.connectionClose(con);
         }
     }
 
@@ -70,15 +68,13 @@ public class EmployeesJDBC implements iEmployees {
             pst.setInt(1, id);
             pst.executeUpdate();
 
+            ConnectionFactory.statementClose(pst);
+
         }catch(SQLException e){
             e.printStackTrace();
         }finally {
-            try {
-                if (con != null)
-                    con.close();
-            } catch (SQLException e) {
-                e.printStackTrace();
-            }
+            if (con != null)
+                ConnectionFactory.connectionClose(con);
         }
     }
 
@@ -102,15 +98,14 @@ public class EmployeesJDBC implements iEmployees {
             if (rs.next()) 
                 empl = map(rs);
 
+            ConnectionFactory.resultSetClose(rs);
+            ConnectionFactory.statementClose(pst);
+
         }catch(SQLException e){
             e.printStackTrace();
         }finally {
-            try {
-                if (con != null)
-                    con.close();
-            } catch (SQLException e) {
-                e.printStackTrace();
-            }
+            if (con != null)
+                ConnectionFactory.connectionClose(con);
         }
 
         return empl;
@@ -136,16 +131,16 @@ public class EmployeesJDBC implements iEmployees {
                 Employees cl = map(rs);
                 result.add(cl);
             }
+
+            ConnectionFactory.resultSetClose(rs);
+            ConnectionFactory.statementClose(stmt);
+
         }catch(SQLException e){
             e.printStackTrace();
 
         }finally {
-            try {
-                if (con != null)
-                    con.close();
-            } catch (SQLException e) {
-                e.printStackTrace();
-            }
+            if (con != null)
+                ConnectionFactory.connectionClose(con);
         }
         return result;
     }
@@ -166,18 +161,18 @@ public class EmployeesJDBC implements iEmployees {
             
             ResultSet rs = pst.executeQuery();
             
-            if (rs.next()) cl = map(rs);
+            if (rs.next())
+                cl = map(rs);
+
+            ConnectionFactory.resultSetClose(rs);
+            ConnectionFactory.statementClose(pst);
 
         }catch(SQLException e){
             e.printStackTrace();
 
         }finally {
-            try {
-                if (con != null)
-                    con.close();
-            } catch (SQLException e) {
-                e.printStackTrace();
-            }
+            if (con != null)
+                ConnectionFactory.connectionClose(con);
         }
         return cl;
     }
@@ -203,16 +198,16 @@ public class EmployeesJDBC implements iEmployees {
                 Employees cl = map(rs);
                 result.add(cl);
             }
+
+            ConnectionFactory.resultSetClose(rs);
+            ConnectionFactory.statementClose(pst);
+
         }catch(SQLException e){
             e.printStackTrace();
 
         }finally {
-            try {
-                if (con != null)
-                    con.close();
-            } catch (SQLException e) {
-                e.printStackTrace();
-            }
+            if (con != null)
+                ConnectionFactory.connectionClose(con);
         }
         return result;
     }

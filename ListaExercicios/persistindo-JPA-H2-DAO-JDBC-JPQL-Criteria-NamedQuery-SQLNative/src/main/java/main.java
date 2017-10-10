@@ -1,19 +1,21 @@
-import dao.EmployeesJPADAO;
-import dao.JPAGeneric;
-import interfaces.EmployeesDAO;
+import model.Dependents;
 import model.Employees;
-import util.JPAUtil;
+import service.DependentsServiceBean;
+import service.EmployeeServiceBean;
 
+import java.util.ArrayList;
 import java.util.List;
-
 
 public class main {
     public static void main(String[] args) {
 
-        JPAUtil.init("devPostgreSQL");
+       try {
 
-        EmployeesDAO employeesDAO = new EmployeesJPADAO(Employees.class);
+       }catch (Exception e){
+           e.printStackTrace();
+       }
 
 
-    }
+
+    }// final main
 }

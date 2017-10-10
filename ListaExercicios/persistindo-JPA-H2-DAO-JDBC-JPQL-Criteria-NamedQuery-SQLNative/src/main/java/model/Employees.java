@@ -1,13 +1,17 @@
 package model;
 
-import org.hibernate.annotations.Columns;
-
 import javax.persistence.*;
+import java.io.Serializable;
 import java.util.List;
 
 @Entity
 @Table(uniqueConstraints={@UniqueConstraint(columnNames={"cpf","matriculation"})})
-public class Employees {
+@NamedQueries({
+        @NamedQuery(
+                name = "Employees.findAll",
+                query = "SELECT e FROM Employees e")
+})
+public class Employees implements Serializable{
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -36,6 +40,15 @@ public class Employees {
         this.name = name;
         this.email = email;
         this.phone = phone;
+    }
+
+    public Employees(String cpf, String matriculation, String name, String email, String phone, List<Dependents> dependents) {
+        this.cpf = cpf;
+        this.matriculation = matriculation;
+        this.name = name;
+        this.email = email;
+        this.phone = phone;
+        this.dependents = dependents;
     }
 
     public Integer getId() {
@@ -84,5 +97,13 @@ public class Employees {
 
     public void setPhone(String phone) {
         this.phone = phone;
+    }
+
+    public List<Dependents> getDependents() {
+        return dependents;
+    }
+
+    public void setDependents(List<Dependents> dependents) {
+        this.dependents = dependents;
     }
 }
