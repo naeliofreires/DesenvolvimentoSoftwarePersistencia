@@ -136,58 +136,58 @@ c) Obter os títulos dos livros e os nomes das suas respectivas editoras. Os res
 -   db.livros.find({}, {titulo: 1, editora: 1}).sort({titulo : 1}).pretty();
 
     
-    {
-    	"_id" : ObjectId("59e544c4efecff6a0c85c35a"),
-    	"titulo" : "Banco de Dados",
-    	"editora" : {
-    		"id" : "4",
-    		"nome" : "Novatec"
-    	}
-    }
-    {
-    	"_id" : ObjectId("59e544c4efecff6a0c85c35f"),
-    	"titulo" : "Engenharia de Software",
-    	"editora" : {
-    		"id" : "2",
-    		"nome" : "FTD"
-    	}
-    }
-    {
-    	"_id" : ObjectId("59e544c4efecff6a0c85c35e"),
-    	"titulo" : "Java para Nerds"
-    }
-    {
-    	"_id" : ObjectId("59e544c4efecff6a0c85c35c"),
-    	"titulo" : "Lógica de Programação",
-    	"editora" : {
-    		"id" : "2",
-    		"nome" : "FTD"
-    	}
-    }
-    {
-    	"_id" : ObjectId("59e544c4efecff6a0c85c35d"),
-    	"titulo" : "Programação Orientada a Objetos",
-    	"editora" : {
-    		"id" : "1",
-    		"nome" : "Atica"
-    	}
-    }
-    {
-    	"_id" : ObjectId("59e544c4efecff6a0c85c360"),
-    	"titulo" : "Redes de Computadores",
-    	"editora" : {
-    		"id" : "3",
-    		"nome" : "Melhoramentos"
-    	}
-    }
-    {
-    	"_id" : ObjectId("59e544c4efecff6a0c85c35b"),
-    	"titulo" : "Sistemas Operacionais",
-    	"editora" : {
-    		"id" : "3",
-    		"nome" : "Melhoramentos"
-    	}
-    }
+            {
+                "_id" : ObjectId("59e544c4efecff6a0c85c35a"),
+                "titulo" : "Banco de Dados",
+                "editora" : {
+                        "id" : "4",
+                        "nome" : "Novatec"
+                }
+            }
+            {
+                "_id" : ObjectId("59e544c4efecff6a0c85c35f"),
+                "titulo" : "Engenharia de Software",
+                "editora" : {
+                        "id" : "2",
+                        "nome" : "FTD"
+                }
+            }
+            {
+                "_id" : ObjectId("59e544c4efecff6a0c85c35e"),
+                "titulo" : "Java para Nerds"
+            }
+            {
+                "_id" : ObjectId("59e544c4efecff6a0c85c35c"),
+                "titulo" : "Lógica de Programação",
+                "editora" : {
+                        "id" : "2",
+                        "nome" : "FTD"
+                }
+            }
+            {
+                "_id" : ObjectId("59e544c4efecff6a0c85c35d"),
+                "titulo" : "Programação Orientada a Objetos",
+                "editora" : {
+                        "id" : "1",
+                        "nome" : "Atica"
+                }
+            }
+            {
+                "_id" : ObjectId("59e544c4efecff6a0c85c360"),
+                "titulo" : "Redes de Computadores",
+                "editora" : {
+                        "id" : "3",
+                        "nome" : "Melhoramentos"
+                }
+            }
+            {
+                "_id" : ObjectId("59e544c4efecff6a0c85c35b"),
+                "titulo" : "Sistemas Operacionais",
+                "editora" : {
+                        "id" : "3",
+                        "nome" : "Melhoramentos"
+                }
+            }
 
 
 
