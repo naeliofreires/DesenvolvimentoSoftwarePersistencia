@@ -2,9 +2,9 @@
 
 # Lista de Exercícios 07 - Questões
 
-> Naélio Freires Roberto de Souza - Sistemas de Informação
-> naeliofreires@gmail.com
-> Resolução [ Respostas ]
+> Naélio Freires Roberto de Souza - Sistemas de Informação <br>
+> naeliofreires@gmail.com <br>
+> Resolução [ Respostas ] <br>
 
 01 - Ainda com relação a JPA, mostre uma consulta sua da Lista 06 usando JPA e     envolvendo mais de uma tabela, que é transformada em 2 ou mais comandos SQL. Depois, altere a consulta JPA para que ela gere apenas um único comando SQL. Ou seja: o objetivo da questão é a otimização de uma consulta através de JPA.
 
