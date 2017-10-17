@@ -7,7 +7,7 @@
 > Resolução [ Respostas ] <br>
 
 01 - Ainda com relação a JPA, mostre uma consulta sua da Lista 06 usando JPA e     envolvendo mais de uma tabela, que é transformada em 2 ou mais comandos SQL. Depois, altere a consulta JPA para que ela gere apenas um único comando SQL. Ou seja: o objetivo da questão é a otimização de uma consulta através de JPA.
-
+```java
         public void CriteriaV02(){
                 JPAUtil.init("devPostgreSQL");
                 EntityManager em = JPAUtil.getEntityManager();
@@ -26,7 +26,7 @@
 
                 JPAUtil.closeEntityManager();
         }
-
+```
 02 -  Dadas as tabelas abaixo no modelo relacional, crie uma única coleção de documentos no MongoDB para representá-las. A coleção deve conter livros com suas respectivas editoras. 
 
         // JSON LIVROS
