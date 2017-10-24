@@ -13,16 +13,25 @@
 
 **a)** Obter o nome da editora, a quantidade total de livros por editora e o valor total (qtd_estoque * valor) dos livros para cada editora. **Somente considerar os livros publicados a partir de 2010.**
 ```js
-	db.livros.aggregate([
+db.livros.aggregate([
     {$match:{ano_publicacao: {'$gte':'2010'}}},
-    {$group:{_id:{nome:'$editora.nome'},valor_total:{$sum:{$multiply: ['$qtd_estoque','$valor']}},qtd_total:{$sum:'$qtd_estoque'}}} ])
+    {$group:{
+    	_id:{nome:'$editora.nome'},
+    	valor_total:{$sum:{$multiply: ['$qtd_estoque','$valor']}},
+	qtd_total:{$sum:'$qtd_estoque'}}} 
+])
 ```
 **b)** Obter a quantidade total de livros disponíveis em estoque com valor unitário abaixo de R$ 100,00.
 
->	
-	db.livros.aggregate([
+```js
+db.livros.aggregate([
 	{$match:{valor:{$lt:100}}},
-	{$group:{_id:null,qtd:{$sum:'$qtd_estoque'}}}])
+	{$group:{
+		_id:null,qtd:{$sum:'$qtd_estoque'}
+		}
+	}
+])
+```
 
 
 **02** Crie um novo database no MongoDB com 2 coleções para representar as tabelas da Lista 07. Sugiro que as coleções sejam criadas de modo a permitir o uso de $lookup. Veja detalhes em: https://docs.mongodb.com/manual/reference/operator/aggregation/lookup/
