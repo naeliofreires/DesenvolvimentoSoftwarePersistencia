@@ -1,11 +1,11 @@
 package main;
 
 import com.fasterxml.jackson.core.JsonProcessingException;
-import com.fasterxml.jackson.databind.ObjectMapper;
 import controlls.ManagingDatabase;
 import models.Editora;
 import models.Livro;
-import org.bson.Document;
+
+import java.util.ArrayList;
 
 public class main {
     public static void main(String[] args) throws JsonProcessingException {
@@ -14,16 +14,10 @@ public class main {
         Editora editora = new Editora();
         ManagingDatabase managingDatabase = new ManagingDatabase();
 
-        ObjectMapper mapper = new ObjectMapper();
+//        managingDatabase.InserirDocumento("livros", new ArrayList<Object>(livro.criarLivro()));
+//        managingDatabase.InserirDocumento("editoras", new ArrayList<Object>(editora.criarEditoras()));
 
-        for(Livro l : livro.criarLivro()){
-            Document document = Document.parse(mapper.writeValueAsString(l));
-            managingDatabase.InserirDocumento("livros", document);
-        }
-
-        for (Editora e : editora.criarEditoras()){
-            Document document = Document.parse(mapper.writeValueAsString(e));
-            managingDatabase.InserirDocumento("editoras", document);
-        }
+        managingDatabase.showCollection("livros");
+        managingDatabase.showCollection("editoras");
     }
 }
