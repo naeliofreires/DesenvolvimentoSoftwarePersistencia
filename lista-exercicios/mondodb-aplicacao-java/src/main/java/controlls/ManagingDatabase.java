@@ -2,15 +2,14 @@ package controlls;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.mongodb.Block;
+import com.mongodb.DBObject;
 import com.mongodb.MongoClient;
+import com.mongodb.QueryBuilder;
 import com.mongodb.client.FindIterable;
 import com.mongodb.client.MongoDatabase;
-
-import models.Editora;
-import models.Livro;
 import org.bson.Document;
+import org.bson.conversions.Bson;
 
-import javax.print.Doc;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -49,4 +48,22 @@ public class ManagingDatabase {
         }
     }
 
+    public void buscarLivrosPorTitulo(String titulo){
+        DBObject query = QueryBuilder
+                .start("titulo")
+                .is(titulo)
+                .get();
+
+        FindIterable<Document> iterable = database.getCollection("livros").find((Bson) query);
+
+        iterable.forEach(new Block<Document>() {
+            public void apply(Document document) {
+                System.out.println(
+                        "Titulo: " + document.getString("titulo") + "\n" +
+                        "Publicação: " + document.getString("ano_publicacao") + "\n" +
+                        "R$: " + document.getDouble("valor")
+                );
+            }
+        });
+    }
 }
