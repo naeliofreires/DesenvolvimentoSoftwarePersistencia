@@ -22,5 +22,7 @@ public class main {
 
 //        managingDatabase.buscarLivroQueCotenhaEsteNome("Programação");
 
+        managingDatabase.consulta1();
+
     }
 }
