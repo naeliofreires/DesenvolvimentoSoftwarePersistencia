@@ -16,8 +16,8 @@
       <file leaf-file-name="ManagingDatabase.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/controlls/ManagingDatabase.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="26">
-              <caret line="70" column="41" lean-forward="false" selection-start-line="70" selection-start-column="41" selection-end-line="70" selection-end-column="41" />
+            <state relative-caret-position="166">
+              <caret line="25" column="0" lean-forward="true" selection-start-line="25" selection-start-column="0" selection-end-line="25" selection-end-column="0" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="method#ManagingDatabase#0;class#ManagingDatabase#0" expanded="false" />
@@ -25,10 +25,12 @@
                 <element signature="method#showCollection#0;class#ManagingDatabase#0" expanded="false" />
                 <element signature="e#1280#1440#0" expanded="true" />
                 <element signature="e#1439#1440#0" expanded="true" />
-                <element signature="e#1824#2200#0" expanded="true" />
-                <element signature="e#2199#2200#0" expanded="true" />
-                <element signature="e#2534#2910#0" expanded="true" />
-                <element signature="e#2909#2910#0" expanded="true" />
+                <element signature="method#buscarLivrosPorTitulo#0;class#ManagingDatabase#0" expanded="false" />
+                <element signature="e#1862#2286#0" expanded="true" />
+                <element signature="e#2285#2286#0" expanded="true" />
+                <element signature="method#buscarLivroQueCotenhaEsteNome#0;class#ManagingDatabase#0" expanded="false" />
+                <element signature="e#2733#3157#0" expanded="true" />
+                <element signature="e#3156#3157#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -37,8 +39,8 @@
       <file leaf-file-name="main.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/main/main.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="468">
-              <caret line="18" column="0" lean-forward="true" selection-start-line="18" selection-start-column="0" selection-end-line="18" selection-end-column="0" />
+            <state relative-caret-position="88">
+              <caret line="10" column="0" lean-forward="false" selection-start-line="10" selection-start-column="2" selection-end-line="11" selection-end-column="42" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -305,12 +307,12 @@
       <workItem from="1509042231926" duration="9666000" />
       <workItem from="1509076309002" duration="1236000" />
       <workItem from="1509111482524" duration="4258000" />
-      <workItem from="1509117506564" duration="1640000" />
+      <workItem from="1509117506564" duration="1906000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="18103000" />
+    <option name="totallyTimeSpent" value="18369000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="41" y="33" width="1325" height="735" extended-state="6" />
@@ -370,10 +372,12 @@
             <element signature="method#showCollection#0;class#ManagingDatabase#0" expanded="false" />
             <element signature="e#1280#1440#0" expanded="true" />
             <element signature="e#1439#1440#0" expanded="true" />
-            <element signature="e#1824#2200#0" expanded="true" />
-            <element signature="e#2199#2200#0" expanded="true" />
-            <element signature="e#2534#2910#0" expanded="true" />
-            <element signature="e#2909#2910#0" expanded="true" />
+            <element signature="method#buscarLivrosPorTitulo#0;class#ManagingDatabase#0" expanded="false" />
+            <element signature="e#1862#2286#0" expanded="true" />
+            <element signature="e#2285#2286#0" expanded="true" />
+            <element signature="method#buscarLivroQueCotenhaEsteNome#0;class#ManagingDatabase#0" expanded="false" />
+            <element signature="e#2733#3157#0" expanded="true" />
+            <element signature="e#3156#3157#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -399,10 +403,12 @@
             <element signature="method#showCollection#0;class#ManagingDatabase#0" expanded="false" />
             <element signature="e#1280#1440#0" expanded="true" />
             <element signature="e#1439#1440#0" expanded="true" />
-            <element signature="e#1824#2200#0" expanded="true" />
-            <element signature="e#2199#2200#0" expanded="true" />
-            <element signature="e#2534#2910#0" expanded="true" />
-            <element signature="e#2909#2910#0" expanded="true" />
+            <element signature="method#buscarLivrosPorTitulo#0;class#ManagingDatabase#0" expanded="false" />
+            <element signature="e#1862#2286#0" expanded="true" />
+            <element signature="e#2285#2286#0" expanded="true" />
+            <element signature="method#buscarLivroQueCotenhaEsteNome#0;class#ManagingDatabase#0" expanded="false" />
+            <element signature="e#2733#3157#0" expanded="true" />
+            <element signature="e#3156#3157#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -453,10 +459,12 @@
             <element signature="method#showCollection#0;class#ManagingDatabase#0" expanded="false" />
             <element signature="e#1280#1440#0" expanded="true" />
             <element signature="e#1439#1440#0" expanded="true" />
-            <element signature="e#1824#2200#0" expanded="true" />
-            <element signature="e#2199#2200#0" expanded="true" />
-            <element signature="e#2534#2910#0" expanded="true" />
-            <element signature="e#2909#2910#0" expanded="true" />
+            <element signature="method#buscarLivrosPorTitulo#0;class#ManagingDatabase#0" expanded="false" />
+            <element signature="e#1862#2286#0" expanded="true" />
+            <element signature="e#2285#2286#0" expanded="true" />
+            <element signature="method#buscarLivroQueCotenhaEsteNome#0;class#ManagingDatabase#0" expanded="false" />
+            <element signature="e#2733#3157#0" expanded="true" />
+            <element signature="e#3156#3157#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -490,10 +498,12 @@
             <element signature="method#showCollection#0;class#ManagingDatabase#0" expanded="false" />
             <element signature="e#1280#1440#0" expanded="true" />
             <element signature="e#1439#1440#0" expanded="true" />
-            <element signature="e#1824#2200#0" expanded="true" />
-            <element signature="e#2199#2200#0" expanded="true" />
-            <element signature="e#2534#2910#0" expanded="true" />
-            <element signature="e#2909#2910#0" expanded="true" />
+            <element signature="method#buscarLivrosPorTitulo#0;class#ManagingDatabase#0" expanded="false" />
+            <element signature="e#1862#2286#0" expanded="true" />
+            <element signature="e#2285#2286#0" expanded="true" />
+            <element signature="method#buscarLivroQueCotenhaEsteNome#0;class#ManagingDatabase#0" expanded="false" />
+            <element signature="e#2733#3157#0" expanded="true" />
+            <element signature="e#3156#3157#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -562,10 +572,12 @@
             <element signature="method#showCollection#0;class#ManagingDatabase#0" expanded="false" />
             <element signature="e#1280#1440#0" expanded="true" />
             <element signature="e#1439#1440#0" expanded="true" />
-            <element signature="e#1824#2200#0" expanded="true" />
-            <element signature="e#2199#2200#0" expanded="true" />
-            <element signature="e#2534#2910#0" expanded="true" />
-            <element signature="e#2909#2910#0" expanded="true" />
+            <element signature="method#buscarLivrosPorTitulo#0;class#ManagingDatabase#0" expanded="false" />
+            <element signature="e#1862#2286#0" expanded="true" />
+            <element signature="e#2285#2286#0" expanded="true" />
+            <element signature="method#buscarLivroQueCotenhaEsteNome#0;class#ManagingDatabase#0" expanded="false" />
+            <element signature="e#2733#3157#0" expanded="true" />
+            <element signature="e#3156#3157#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -581,10 +593,12 @@
             <element signature="method#showCollection#0;class#ManagingDatabase#0" expanded="false" />
             <element signature="e#1280#1440#0" expanded="true" />
             <element signature="e#1439#1440#0" expanded="true" />
-            <element signature="e#1824#2200#0" expanded="true" />
-            <element signature="e#2199#2200#0" expanded="true" />
-            <element signature="e#2534#2910#0" expanded="true" />
-            <element signature="e#2909#2910#0" expanded="true" />
+            <element signature="method#buscarLivrosPorTitulo#0;class#ManagingDatabase#0" expanded="false" />
+            <element signature="e#1862#2286#0" expanded="true" />
+            <element signature="e#2285#2286#0" expanded="true" />
+            <element signature="method#buscarLivroQueCotenhaEsteNome#0;class#ManagingDatabase#0" expanded="false" />
+            <element signature="e#2733#3157#0" expanded="true" />
+            <element signature="e#3156#3157#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -645,8 +659,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/controlls/ManagingDatabase.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="26">
-          <caret line="70" column="41" lean-forward="false" selection-start-line="70" selection-start-column="41" selection-end-line="70" selection-end-column="41" />
+        <state relative-caret-position="166">
+          <caret line="25" column="0" lean-forward="true" selection-start-line="25" selection-start-column="0" selection-end-line="25" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="method#ManagingDatabase#0;class#ManagingDatabase#0" expanded="false" />
@@ -654,18 +668,20 @@
             <element signature="method#showCollection#0;class#ManagingDatabase#0" expanded="false" />
             <element signature="e#1280#1440#0" expanded="true" />
             <element signature="e#1439#1440#0" expanded="true" />
-            <element signature="e#1824#2200#0" expanded="true" />
-            <element signature="e#2199#2200#0" expanded="true" />
-            <element signature="e#2534#2910#0" expanded="true" />
-            <element signature="e#2909#2910#0" expanded="true" />
+            <element signature="method#buscarLivrosPorTitulo#0;class#ManagingDatabase#0" expanded="false" />
+            <element signature="e#1862#2286#0" expanded="true" />
+            <element signature="e#2285#2286#0" expanded="true" />
+            <element signature="method#buscarLivroQueCotenhaEsteNome#0;class#ManagingDatabase#0" expanded="false" />
+            <element signature="e#2733#3157#0" expanded="true" />
+            <element signature="e#3156#3157#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/main/main.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="468">
-          <caret line="18" column="0" lean-forward="true" selection-start-line="18" selection-start-column="0" selection-end-line="18" selection-end-column="0" />
+        <state relative-caret-position="88">
+          <caret line="10" column="0" lean-forward="false" selection-start-line="10" selection-start-column="2" selection-end-line="11" selection-end-column="42" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>

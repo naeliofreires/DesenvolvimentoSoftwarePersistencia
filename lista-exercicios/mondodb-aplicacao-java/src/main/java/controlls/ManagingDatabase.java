@@ -50,40 +50,49 @@ public class ManagingDatabase {
     }
 
     public void buscarLivrosPorTitulo(String titulo){
-        DBObject query = QueryBuilder
-                .start("titulo")
-                .is(titulo)
-                .get();
+        try {
+            DBObject query = QueryBuilder
+                    .start("titulo")
+                    .is(titulo)
+                    .get();
 
-        FindIterable<Document> iterable = database.getCollection("livros").find((Bson) query);
+            FindIterable<Document> iterable = database.getCollection("livros").find((Bson) query);
 
-        iterable.forEach(new Block<Document>() {
-            public void apply(Document document) {
-                System.out.println(
-                        "Titulo: " + document.getString("titulo") + "\n" +
-                        "Publicação: " + document.getString("ano_publicacao") + "\n" +
-                        "R$: " + document.getDouble("valor")
-                );
-            }
-        });
+            iterable.forEach(new Block<Document>() {
+                public void apply(Document document) {
+                    System.out.println(
+                            "Titulo: " + document.getString("titulo") + "\n" +
+                                    "Publicação: " + document.getString("ano_publicacao") + "\n" +
+                                    "R$: " + document.getDouble("valor")
+                    );
+                }
+            });
+        }catch (Exception ex){
+            ex.printStackTrace();
+        }
     }
 
     public void buscarLivroQueCotenhaEsteNome(String nome){
-        DBObject query = QueryBuilder
-                .start("titulo")
-                .regex(Pattern.compile(nome))
-                .get();
+        try {
+            DBObject query = QueryBuilder
+                    .start("titulo")
+                    .regex(Pattern.compile(nome))
+                    .get();
 
-        FindIterable<Document> iterable =  database.getCollection("livros").find((Bson) query);
+            FindIterable<Document> iterable =  database.getCollection("livros").find((Bson) query);
 
-        iterable.forEach(new Block<Document>() {
-            public void apply(Document document) {
-                System.out.println(
-                        "Titulo: " + document.getString("titulo") + "\n" +
-                        "Publicação: " + document.getString("ano_publicacao") + "\n" +
-                        "R$: " + document.getDouble("valor")
-                );
-            }
-        });
+            iterable.forEach(new Block<Document>() {
+                public void apply(Document document) {
+                    System.out.println(
+                            "Titulo: " + document.getString("titulo") + "\n" +
+                                    "Publicação: " + document.getString("ano_publicacao") + "\n" +
+                                    "R$: " + document.getDouble("valor")
+                    );
+                }
+            });
+        }catch (Exception ex){
+            ex.printStackTrace();
+        }
     }
+
 }
