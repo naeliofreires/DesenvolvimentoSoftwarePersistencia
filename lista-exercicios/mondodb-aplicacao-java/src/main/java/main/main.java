@@ -15,6 +15,8 @@ public class main {
 //        managingDatabase.showCollection("livros");
 //        managingDatabase.showCollection("editoras");
 
-        managingDatabase.buscarLivrosPorTitulo("Banco de Dados");
+//        managingDatabase.buscarLivrosPorTitulo("Banco de Dados");
+
+        managingDatabase.buscarLivroQueCotenhaEsteNome("Programação");
     }
 }

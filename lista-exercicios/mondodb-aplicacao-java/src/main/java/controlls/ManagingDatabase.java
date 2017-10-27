@@ -12,6 +12,7 @@ import org.bson.conversions.Bson;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.regex.Pattern;
 
 public class ManagingDatabase {
 
@@ -55,6 +56,25 @@ public class ManagingDatabase {
                 .get();
 
         FindIterable<Document> iterable = database.getCollection("livros").find((Bson) query);
+
+        iterable.forEach(new Block<Document>() {
+            public void apply(Document document) {
+                System.out.println(
+                        "Titulo: " + document.getString("titulo") + "\n" +
+                        "Publicação: " + document.getString("ano_publicacao") + "\n" +
+                        "R$: " + document.getDouble("valor")
+                );
+            }
+        });
+    }
+
+    public void buscarLivroQueCotenhaEsteNome(String nome){
+        DBObject query = QueryBuilder
+                .start("titulo")
+                .regex(Pattern.compile(nome))
+                .get();
+
+        FindIterable<Document> iterable =  database.getCollection("livros").find((Bson) query);
 
         iterable.forEach(new Block<Document>() {
             public void apply(Document document) {

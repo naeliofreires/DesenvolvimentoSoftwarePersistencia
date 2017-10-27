@@ -13,29 +13,32 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="ManagingDatabase.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="ManagingDatabase.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/controlls/ManagingDatabase.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="426">
-              <caret line="64" column="18" lean-forward="true" selection-start-line="64" selection-start-column="18" selection-end-line="64" selection-end-column="18" />
+            <state relative-caret-position="26">
+              <caret line="70" column="41" lean-forward="false" selection-start-line="70" selection-start-column="41" selection-end-line="70" selection-end-column="41" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="method#ManagingDatabase#0;class#ManagingDatabase#0" expanded="false" />
                 <element signature="method#InserirDocumento#0;class#ManagingDatabase#0" expanded="false" />
-                <element signature="e#1248#1408#0" expanded="true" />
-                <element signature="e#1407#1408#0" expanded="true" />
-                <element signature="e#1792#2168#0" expanded="true" />
-                <element signature="e#2167#2168#0" expanded="true" />
+                <element signature="method#showCollection#0;class#ManagingDatabase#0" expanded="false" />
+                <element signature="e#1280#1440#0" expanded="true" />
+                <element signature="e#1439#1440#0" expanded="true" />
+                <element signature="e#1824#2200#0" expanded="true" />
+                <element signature="e#2199#2200#0" expanded="true" />
+                <element signature="e#2534#2910#0" expanded="true" />
+                <element signature="e#2909#2910#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="main.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="main.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/main/main.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="442">
-              <caret line="17" column="42" lean-forward="false" selection-start-line="17" selection-start-column="42" selection-end-line="17" selection-end-column="42" />
+            <state relative-caret-position="468">
+              <caret line="18" column="0" lean-forward="true" selection-start-line="18" selection-start-column="0" selection-end-line="18" selection-end-column="0" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -65,8 +68,8 @@
         <option value="$PROJECT_DIR$/src/main/java/models/Editora.java" />
         <option value="$PROJECT_DIR$/pom.xml" />
         <option value="$PROJECT_DIR$/src/main/java/models/Livro.java" />
-        <option value="$PROJECT_DIR$/src/main/java/main/main.java" />
         <option value="$PROJECT_DIR$/src/main/java/controlls/ManagingDatabase.java" />
+        <option value="$PROJECT_DIR$/src/main/java/main/main.java" />
       </list>
     </option>
   </component>
@@ -302,12 +305,12 @@
       <workItem from="1509042231926" duration="9666000" />
       <workItem from="1509076309002" duration="1236000" />
       <workItem from="1509111482524" duration="4258000" />
-      <workItem from="1509117506564" duration="1005000" />
+      <workItem from="1509117506564" duration="1640000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="17468000" />
+    <option name="totallyTimeSpent" value="18103000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="41" y="33" width="1325" height="735" extended-state="6" />
@@ -323,7 +326,7 @@
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.864139" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.328594" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.24981132" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
@@ -364,10 +367,13 @@
             <element signature="imports" expanded="true" />
             <element signature="method#ManagingDatabase#0;class#ManagingDatabase#0" expanded="false" />
             <element signature="method#InserirDocumento#0;class#ManagingDatabase#0" expanded="false" />
-            <element signature="e#1248#1408#0" expanded="true" />
-            <element signature="e#1407#1408#0" expanded="true" />
-            <element signature="e#1792#2168#0" expanded="true" />
-            <element signature="e#2167#2168#0" expanded="true" />
+            <element signature="method#showCollection#0;class#ManagingDatabase#0" expanded="false" />
+            <element signature="e#1280#1440#0" expanded="true" />
+            <element signature="e#1439#1440#0" expanded="true" />
+            <element signature="e#1824#2200#0" expanded="true" />
+            <element signature="e#2199#2200#0" expanded="true" />
+            <element signature="e#2534#2910#0" expanded="true" />
+            <element signature="e#2909#2910#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -390,10 +396,13 @@
             <element signature="imports" expanded="true" />
             <element signature="method#ManagingDatabase#0;class#ManagingDatabase#0" expanded="false" />
             <element signature="method#InserirDocumento#0;class#ManagingDatabase#0" expanded="false" />
-            <element signature="e#1248#1408#0" expanded="true" />
-            <element signature="e#1407#1408#0" expanded="true" />
-            <element signature="e#1792#2168#0" expanded="true" />
-            <element signature="e#2167#2168#0" expanded="true" />
+            <element signature="method#showCollection#0;class#ManagingDatabase#0" expanded="false" />
+            <element signature="e#1280#1440#0" expanded="true" />
+            <element signature="e#1439#1440#0" expanded="true" />
+            <element signature="e#1824#2200#0" expanded="true" />
+            <element signature="e#2199#2200#0" expanded="true" />
+            <element signature="e#2534#2910#0" expanded="true" />
+            <element signature="e#2909#2910#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -441,10 +450,13 @@
             <element signature="imports" expanded="true" />
             <element signature="method#ManagingDatabase#0;class#ManagingDatabase#0" expanded="false" />
             <element signature="method#InserirDocumento#0;class#ManagingDatabase#0" expanded="false" />
-            <element signature="e#1248#1408#0" expanded="true" />
-            <element signature="e#1407#1408#0" expanded="true" />
-            <element signature="e#1792#2168#0" expanded="true" />
-            <element signature="e#2167#2168#0" expanded="true" />
+            <element signature="method#showCollection#0;class#ManagingDatabase#0" expanded="false" />
+            <element signature="e#1280#1440#0" expanded="true" />
+            <element signature="e#1439#1440#0" expanded="true" />
+            <element signature="e#1824#2200#0" expanded="true" />
+            <element signature="e#2199#2200#0" expanded="true" />
+            <element signature="e#2534#2910#0" expanded="true" />
+            <element signature="e#2909#2910#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -475,10 +487,13 @@
             <element signature="imports" expanded="true" />
             <element signature="method#ManagingDatabase#0;class#ManagingDatabase#0" expanded="false" />
             <element signature="method#InserirDocumento#0;class#ManagingDatabase#0" expanded="false" />
-            <element signature="e#1248#1408#0" expanded="true" />
-            <element signature="e#1407#1408#0" expanded="true" />
-            <element signature="e#1792#2168#0" expanded="true" />
-            <element signature="e#2167#2168#0" expanded="true" />
+            <element signature="method#showCollection#0;class#ManagingDatabase#0" expanded="false" />
+            <element signature="e#1280#1440#0" expanded="true" />
+            <element signature="e#1439#1440#0" expanded="true" />
+            <element signature="e#1824#2200#0" expanded="true" />
+            <element signature="e#2199#2200#0" expanded="true" />
+            <element signature="e#2534#2910#0" expanded="true" />
+            <element signature="e#2909#2910#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -544,10 +559,13 @@
             <element signature="imports" expanded="true" />
             <element signature="method#ManagingDatabase#0;class#ManagingDatabase#0" expanded="false" />
             <element signature="method#InserirDocumento#0;class#ManagingDatabase#0" expanded="false" />
-            <element signature="e#1248#1408#0" expanded="true" />
-            <element signature="e#1407#1408#0" expanded="true" />
-            <element signature="e#1792#2168#0" expanded="true" />
-            <element signature="e#2167#2168#0" expanded="true" />
+            <element signature="method#showCollection#0;class#ManagingDatabase#0" expanded="false" />
+            <element signature="e#1280#1440#0" expanded="true" />
+            <element signature="e#1439#1440#0" expanded="true" />
+            <element signature="e#1824#2200#0" expanded="true" />
+            <element signature="e#2199#2200#0" expanded="true" />
+            <element signature="e#2534#2910#0" expanded="true" />
+            <element signature="e#2909#2910#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -560,10 +578,13 @@
             <element signature="imports" expanded="true" />
             <element signature="method#ManagingDatabase#0;class#ManagingDatabase#0" expanded="false" />
             <element signature="method#InserirDocumento#0;class#ManagingDatabase#0" expanded="false" />
-            <element signature="e#1248#1408#0" expanded="true" />
-            <element signature="e#1407#1408#0" expanded="true" />
-            <element signature="e#1792#2168#0" expanded="true" />
-            <element signature="e#2167#2168#0" expanded="true" />
+            <element signature="method#showCollection#0;class#ManagingDatabase#0" expanded="false" />
+            <element signature="e#1280#1440#0" expanded="true" />
+            <element signature="e#1439#1440#0" expanded="true" />
+            <element signature="e#1824#2200#0" expanded="true" />
+            <element signature="e#2199#2200#0" expanded="true" />
+            <element signature="e#2534#2910#0" expanded="true" />
+            <element signature="e#2909#2910#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -612,16 +633,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/main/main.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="442">
-          <caret line="17" column="42" lean-forward="false" selection-start-line="17" selection-start-column="42" selection-end-line="17" selection-end-column="42" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://$MAVEN_REPOSITORY$/org/mongodb/mongo-java-driver/3.5.0/mongo-java-driver-3.5.0.jar!/org/bson/Document.class">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="97">
@@ -634,16 +645,29 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/controlls/ManagingDatabase.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="426">
-          <caret line="64" column="18" lean-forward="true" selection-start-line="64" selection-start-column="18" selection-end-line="64" selection-end-column="18" />
+        <state relative-caret-position="26">
+          <caret line="70" column="41" lean-forward="false" selection-start-line="70" selection-start-column="41" selection-end-line="70" selection-end-column="41" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="method#ManagingDatabase#0;class#ManagingDatabase#0" expanded="false" />
             <element signature="method#InserirDocumento#0;class#ManagingDatabase#0" expanded="false" />
-            <element signature="e#1248#1408#0" expanded="true" />
-            <element signature="e#1407#1408#0" expanded="true" />
-            <element signature="e#1792#2168#0" expanded="true" />
-            <element signature="e#2167#2168#0" expanded="true" />
+            <element signature="method#showCollection#0;class#ManagingDatabase#0" expanded="false" />
+            <element signature="e#1280#1440#0" expanded="true" />
+            <element signature="e#1439#1440#0" expanded="true" />
+            <element signature="e#1824#2200#0" expanded="true" />
+            <element signature="e#2199#2200#0" expanded="true" />
+            <element signature="e#2534#2910#0" expanded="true" />
+            <element signature="e#2909#2910#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/main/main.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="468">
+          <caret line="18" column="0" lean-forward="true" selection-start-line="18" selection-start-column="0" selection-end-line="18" selection-end-column="0" />
+          <folding>
+            <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
