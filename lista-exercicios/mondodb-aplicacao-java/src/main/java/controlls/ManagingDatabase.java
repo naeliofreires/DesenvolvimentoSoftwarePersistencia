@@ -1,16 +1,15 @@
 package controlls;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
-import com.mongodb.Block;
-import com.mongodb.DBObject;
-import com.mongodb.MongoClient;
-import com.mongodb.QueryBuilder;
+import com.mongodb.*;
+import com.mongodb.client.AggregateIterable;
 import com.mongodb.client.FindIterable;
 import com.mongodb.client.MongoDatabase;
 import org.bson.Document;
 import org.bson.conversions.Bson;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 import java.util.regex.Pattern;
 
@@ -96,22 +95,21 @@ public class ManagingDatabase {
     }
 
     /**
-     * Obter o nome da editora, a quantidade total de livros por editora e o valor total (qtd_estoque * valor)
-     * dos livros para cada editora. Somente considerar os livros publicados a partir de 2010.*/
+     * Obter a quantidade total de livros disponíveis em estoque com valor unitário abaixo de R$ 100,00.*/
     public void consulta1(){
         try {
-            DBObject query = QueryBuilder.start("ano_publicacao").greaterThanEquals(2010).get();
-            FindIterable<Document> iterable =  database.getCollection("livros").find((Bson) query);
-            iterable.forEach(new Block<Document>() {
+
+            AggregateIterable<Document> output = database.getCollection("livros").aggregate(Arrays.asList(
+                    new Document("$match", new Document("valor", new Document("$lt", 100))),
+                    new Document("$group", new Document("_id", null).append("QuantidadeDisponivel", new Document("$sum", "$qtd_estoque")))
+            ));
+
+            output.forEach(new Block<Document>() {
                 public void apply(Document document) {
-                    System.out.println(
-                            "Titulo: " + document.getString("titulo") + "\n" +
-                            "Publicação: " + document.getInteger("ano_publicacao") + "\n" +
-                            "Valor Unitario R$: " + document.getDouble("valor") + "\n" +
-                            "Valor total R$: " + document.getDouble("valor") * document.getInteger("qtd_estoque") + "\n"
-                    );
+                    System.out.println(document.toJson());
                 }
             });
+
         }catch (Exception ex){
             ex.printStackTrace();
         }
