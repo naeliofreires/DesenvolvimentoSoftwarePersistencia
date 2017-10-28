@@ -2,8 +2,6 @@ package main;
 
 import com.fasterxml.jackson.core.JsonProcessingException;
 import controlls.ManagingDatabase;
-import models.Editora;
-import models.Livro;
 
 public class main {
     public static void main(String[] args) throws JsonProcessingException {
@@ -22,7 +20,8 @@ public class main {
 
 //        managingDatabase.buscarLivroQueCotenhaEsteNome("Programação");
 
-        managingDatabase.consulta1();
+//        managingDatabase.consulta01();
+        managingDatabase.consulta02();
 
     }
 }

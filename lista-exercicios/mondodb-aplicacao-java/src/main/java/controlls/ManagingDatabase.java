@@ -8,9 +8,10 @@ import com.mongodb.client.MongoDatabase;
 import org.bson.Document;
 import org.bson.conversions.Bson;
 
+import javax.print.Doc;
 import java.util.ArrayList;
 import java.util.Arrays;
-import java.util.List;
+import java.util.concurrent.ExecutionException;
 import java.util.regex.Pattern;
 
 public class ManagingDatabase {
@@ -96,7 +97,7 @@ public class ManagingDatabase {
 
     /**
      * Obter a quantidade total de livros disponíveis em estoque com valor unitário abaixo de R$ 100,00.*/
-    public void consulta1(){
+    public void consulta01(){
         try {
 
             AggregateIterable<Document> output = database.getCollection("livros").aggregate(Arrays.asList(
@@ -110,6 +111,34 @@ public class ManagingDatabase {
                 }
             });
 
+        }catch (Exception ex){
+            ex.printStackTrace();
+        }
+    }
+
+    /**
+     * Obter os títulos dos livros e os nomes das suas respectivas editoras. Os resultados devem ser exibidos em ordem
+     * crescente pelo título do livro. Os livros que não possuem editora também devem aparecer na listagem.*/
+
+    public void consulta02(){
+        try {
+            AggregateIterable<Document> aggregateIterable = database.getCollection("livros").aggregate(Arrays.asList(
+                    new Document( "$sort", new Document("titulo", 1)),
+                    new Document("$lookup", new Document("from", "editoras")
+                            .append("localField", "id_editora")
+                            .append("foreignField", "id")
+                            .append("as", "editora")),
+                    new Document("$project", new Document("_id", 0)
+                            .append("titulo", 1)
+                            .append("valor", 1)
+                            .append("editora.nome", 1))
+            ));
+
+            aggregateIterable.forEach(new Block<Document>() {
+                public void apply(Document document) {
+                    System.out.println(document.toJson());
+                }
+            });
         }catch (Exception ex){
             ex.printStackTrace();
         }
