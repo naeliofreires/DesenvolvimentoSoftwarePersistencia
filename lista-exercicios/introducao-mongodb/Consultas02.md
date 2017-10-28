@@ -41,9 +41,9 @@ db.livros.aggregate([
 
 ```js
 db.livros.aggregate([
-        {$match:{ano_publicacao: {'$gte':'2010'}}},
-        {$lookup:from:'editoras',localField:'id_editora',foreignField:'id',as:'Editora'}},
-        {$group:{_id:'$editora.nome',qtd_total:{$sum:'$qtd_estoque'},valor_total:{$sum:{$multiply:	['$qtd_estoque','$valor']}}}}
+        {$lookup: from:'editoras',localField:'id_editora',foreignField:'id',as:'Editora'}},
+        {$sort:{titulo:1}},
+        {$project:{titulo:1,'Editora.nome':1}}
 ])
 ```
 
@@ -51,8 +51,9 @@ db.livros.aggregate([
 
 ```js
 db.livros.aggregate([
-        {$lookup: from:'editoras',localField:'id_editora',foreignField:'id',as:'Editora'}},
-        {$sort:{titulo:1}},
-        {$project:{titulo:1,'Editora.nome':1}}
+        {$match:{ano_publicacao: {'$gte':'2010'}}},
+        {$lookup:from:'editoras',localField:'id_editora',foreignField:'id',as:'Editora'}},
+        {$group:{_id:'$editora.nome',qtd_total:{$sum:'$qtd_estoque'},valor_total:{$sum:{$multiply:	['$qtd_estoque','$valor']}}}}
 ])
 ```
+
