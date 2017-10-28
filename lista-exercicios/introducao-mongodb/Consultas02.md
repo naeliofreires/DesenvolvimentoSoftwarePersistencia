@@ -1,11 +1,13 @@
 ﻿Desenvolvimento de Software
 ========================
-##Lista 08
+
+LISTA 08
 
 ----------
 
-> Naélio Freires R. de Souza naeliofreires@gmail.com Sistemas de
-> Informação - 380055
+> Naélio Freires R. de Souza <br> 
+> naeliofreires@gmail.com <br> 
+>Sistemas de Informação - 380055
 
 ###Questões
 
