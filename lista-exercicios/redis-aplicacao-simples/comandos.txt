@@ -1,0 +1,112 @@
+		[ESTRUTURA TIPO STRING]
+
+SET contato:name "naelio freires"	=> OK
+
+GET contato:name	=> "naelio freires"
+
+INCR contador		=> (integer)1
+
+GET contador		=> "1"
+
+INCR contador		=> (integer) 2
+
+GET contador		=> "2"
+
+DECR contador		=> (integer) 1
+
+GET contador		=> "1"
+
+EXPIRE contato:nome 10 [segundos]
+
+GET contato:nome 	=> (nil)
+
+EXPIREAT contador 122334343 [timestamp][data]
+
+
+		[ESTRUTURA TIPO LIST]
+
+
+LPUSH lista "meio" 	=> (integer) 1 	[add no inicio]
+
+LRANGE lista 0 -1 	=> 1) "meio" 	[mostra o conteudo da lista]
+
+RPUSH lista "fim" 	=> (integer) 1 	[add no fim]
+
+LRANGE lista 0 -1	=> 1) "meio"  2) "fim"
+
+LPUSH lista "inicio" 	=> (integer) 3
+
+LRANGE lista 0 -1	=> 1) "inicio"  2) "meio"  3) "fim"
+
+
+		[ESTRUTURA TIPO SET]
+	
+     [key] [valor]
+SADD  set "naelio"	=> (integer)1
+
+SMEMBERS set		=> 1) "naelio"
+
+SADD set "freires"	=> (integer)1
+
+SMEMBERS set		=> 1) "freires"  2) "naelio"
+
+SADD set "naelio"	=> (integer) 0  [ não aceita valores repetidos]
+
+SMEMBERS set		=> 1) "freires"  2) "naelio"
+
+
+SADD set1 "um"		=> (integer)1
+
+SADD set1 "dois"	=> (integer)1
+
+SADD set2 "dois"	=> (integer)1
+
+SADD set2 "tres"	=> (integer)1
+
+SINTER set1 set2	=> 1) "dois"	[realiza a interceção]
+
+SINTERSTORE set1:inter:set2 set1 set2	=> (integer)1
+
+SMEMBERS set1:inter:set2	=> 1) "dois"
+
+SUNION set1 set2	=> 1) "dois"  2) "tres"  3) "um"	[realiza a união]
+
+SDIFF set1 set2		=> 1) "um"	[realiza a diferença]
+
+ZADD zset 1 "naelio"	=> (integer) 1  [add elemento e informa o score(posicão) dele]
+
+ZRANGE zset 0 -1	=> 1) "paul"
+
+ZRANGE zset 0 -1 WITHSCORES	=> 1) "paul" 2) "1"
+
+ZREVRANGE 	=> do maior valor, para o menor valor ...
+
+
+HSET contato name "naelio"	=>
+
+HGET contato name	=> "naelio"
+
+HMSET contato email "naelio@email.com" id 1	=> OK
+
+HGET contato email	=> "naelio@email.com"
+
+HGET contato id		=> "1"
+
+HKEYS contato		=> 1) "name" 2) "email"	3) "id"
+
+HGETALL contato		=> 1) "name" 2) "naelio" 3) "email" 4) "naelio@email.com" 5) "id" 6) "1"
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
