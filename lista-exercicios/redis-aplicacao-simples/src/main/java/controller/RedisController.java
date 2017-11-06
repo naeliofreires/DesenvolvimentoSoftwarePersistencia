@@ -40,20 +40,39 @@ public class RedisController {
 	}
 	
 	// todas as tags
-	public void getTags() {
-		Set<String> alltags = jedis.smembers("all:art");
-		for(String srt : alltags)
-			System.out.println(srt);
+	public Set<String> getTags() {
+		return jedis.smembers("all:art");
 	}
 	
 	// todas as tags de um determinado artigo
 	public void getTagsArtigo(String artigo) {
-		Map<String, String> all =  jedis.hgetAll(artigo);
 		
+		Map<String, String> all =  jedis.hgetAll("art:" + artigo);
+		
+		System.out.println("\ntags do artigo: " + artigo);
 		for(Map.Entry<String, String> elemento : all.entrySet()) {
 			System.out.println(elemento.getKey());
 		}
 	}
+	
+	//imprindo nome e descricao de todos os artigos
+	public void name_desc_all_artigos() {
+		for(String srt : getTags()) {
+			
+			Map<String, String> all =  jedis.hgetAll("art:" + srt);
+			
+			for(Map.Entry<String, String> elemento : all.entrySet()) {
+				
+				if(elemento.getKey().equals("name"))
+					System.out.println("Name: " + elemento.getValue());
+				
+				if(elemento.getKey().equals("description"))
+					System.out.println("Description: " + elemento.getValue());
+			}
+		}
+	}
+	
+	
 
 	
 }
