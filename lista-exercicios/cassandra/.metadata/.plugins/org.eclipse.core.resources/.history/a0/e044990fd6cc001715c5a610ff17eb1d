@@ -1,0 +1,8 @@
+package com.exemplo.cassandra;
+
+import com.datastax.driver.core.Cluster;
+
+public class SimpleClient {
+
+	private Cluster cluster;
+}

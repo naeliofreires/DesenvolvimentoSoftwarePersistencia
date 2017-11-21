@@ -1,0 +1,5 @@
+package com.exemplo.cassandra;
+
+public class SimpleClient {
+
+}

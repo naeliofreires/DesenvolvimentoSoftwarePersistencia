@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<qualifiedTypeNameHistroy>
+<fullyQualifiedTypeName name="com.exemplo.cassandra.SimpleClient"/>
+<fullyQualifiedTypeName name="com.codahale.metrics.ConsoleReporter.Builder"/>
+<fullyQualifiedTypeName name="com.datastax.driver.core.Cluster.Builder"/>
+<fullyQualifiedTypeName name="com.exemplo.cassandra.CassandraConnector"/>
+<fullyQualifiedTypeName name="com.datastax.driver.core.ResultSet"/>
+<fullyQualifiedTypeName name="java.util.List"/>
+<fullyQualifiedTypeName name="java.awt.List"/>
+</qualifiedTypeNameHistroy>

@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename resource &apos;cassandra-neo4j&apos; to &apos;cassandra&apos;" description="Rename resource &apos;cassandra-neo4j&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="/cassandra-neo4j" name="cassandra" stamp="1511291858498" updateReferences="true"/>
+</session>

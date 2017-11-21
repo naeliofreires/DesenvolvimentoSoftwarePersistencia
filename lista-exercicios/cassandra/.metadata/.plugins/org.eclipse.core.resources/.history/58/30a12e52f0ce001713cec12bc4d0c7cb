@@ -1,0 +1,162 @@
+package com.exemplo.cassandra;
+
+import java.util.List;
+import java.util.stream.Collectors;
+
+import com.datastax.driver.core.Cluster;
+import com.datastax.driver.core.Cluster.Builder;
+import com.datastax.driver.core.ResultSet;
+import com.datastax.driver.core.Row;
+import com.datastax.driver.core.Session;
+
+public class CassandraConnector {
+
+	private Cluster cluster;
+
+	private Session session;
+
+	// Conexão
+	public void connect(String node) {
+
+		try {
+			Builder builder = Cluster.builder().addContactPoint(node);
+
+			cluster = builder.build();
+
+			session = cluster.connect();
+
+			System.out.println("Conexão realizada com sucesso!");
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+
+	}
+
+	// Pegando Sessão
+	public Session getSession() {
+		return this.session;
+	}
+
+	// Fechando Sessão e Cluster [Conexão]
+	public void close() {
+		try {
+			session.close();
+
+			cluster.close();
+
+			System.out.println("Conexão encerrada!");
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+	}
+
+	/**
+	[replicationFactor e o replicationStrategy]
+	Esses parâmetros determinam o número de réplicas e como as 
+	réplicas serão distribuídas ao longo do anel, respectivamente.
+	 **/
+	public void createKeyspace( String keyspaceName, String replicationStrategy, int replicationFactor) {
+		try {
+			StringBuilder stringBuilder = 
+					new StringBuilder("CREATE KEYSPACE IF NOT EXISTS ")
+					.append(keyspaceName).append(" WITH replication = {")
+					.append("'class':'").append(replicationStrategy)
+					.append("','replication_factor':").append(replicationFactor)
+					.append("};");
+
+			String query = stringBuilder.toString();
+			session.execute(query);
+
+			System.out.println("Keyspace criado com sucesso!");
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+	}
+
+	public void createTable() {
+
+		try {
+			// usuarios
+			session.execute("CREATE TABLE IF NOT EXISTS twissandra.users ( id uuid PRIMARY KEY, username text, password text );");
+			System.out.println("Tabela 'users' criada com sucesso!");
+
+			// followers
+			session.execute("CREATE TABLE IF NOT EXISTS twissandra.followers ( id uuid PRIMARY KEY, user uuid, follower uuid );");
+			System.out.println("Tabela 'followers' criada com sucesso!");
+
+			// following
+			session.execute("CREATE TABLE IF NOT EXISTS twissandra.following ( id uuid PRIMARY KEY, user uuid, followed uuid );");
+			System.out.println("Tabela 'following' com sucesso!");
+
+			// tweets
+			session.execute("CREATE TABLE IF NOT EXISTS twissandra.tweets ( id uuid PRIMARY KEY, user uuid, body text, timestamp TIMESTAMP );");
+			System.out.println("Tabela 'tweets' com sucesso!");
+
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+	}
+
+	public void load(){
+		try {
+			// Inserindo Usuarios
+			session.execute("insert into twissandra.users (id, , password) values (now(),'Naelio','naelio');");
+			session.execute("insert into twissandra.users (id, username, password) values (now(),'Roy','roy');");
+			session.execute("insert into twissandra.users (id, username, password) values (now(),'Rodrigo','rodrigo');");
+			session.execute("insert into twissandra.users (id, username, password) values (now(),'Jmenthos','jmenthos');");
+			session.execute("insert into twissandra.users (id, username, password) values (now(),'Andreazo','andreazo');");
+
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+	}
+
+	public void read(){
+		try {
+			ResultSet result = session.execute("SELECT * FROM twissandra.users;");
+
+			for (Row row : result.all()) 
+				System.out.println("Nome: " + row.getString("username"));   
+
+
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+	}
+
+	public void listKeyspaces(){
+
+		final String keyspaceName = "twissandra";
+
+		ResultSet result = session.execute("SELECT * FROM system_schema.keyspaces;");
+
+		List<String> matchedKeyspaces = result.all()
+				.stream()
+				.filter(r -> r.getString(0).equals(keyspaceName.toLowerCase()))
+				.map(r -> r.getString(0))
+				.collect(Collectors.toList());
+
+		for(String srt : matchedKeyspaces)
+			System.out.println(srt);
+	}
+
+	public static void main(String[] args) {
+
+		CassandraConnector cassandraConnector = new CassandraConnector();
+
+		cassandraConnector.connect("127.0.0.1");
+
+		cassandraConnector.createKeyspace(" twissandra", "SimpleStrategy", 1);
+
+		cassandraConnector.createTable();
+
+		//		cassandraConnector.load();
+
+		cassandraConnector.read();
+
+		cassandraConnector.listKeyspaces();
+
+		cassandraConnector.close();
+	}
+
+}

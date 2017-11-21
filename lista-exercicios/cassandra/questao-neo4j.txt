@@ -1,0 +1,8 @@
+CREATE (a:Person { name: "Andreas" }),
+(p:Person { name: "Peter"}),
+(e:Person { name: "Emil" }),
+(al:Person { name: "Allison" }),
+(a)-[:KNOWS]->(p),
+(a)-[:KNOWS]->(e),
+(e)-[:KNOWS]->(p),
+(e)-[:KNOWS]->(al)
